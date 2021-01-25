@@ -265,6 +265,13 @@ section .title::after{
     background: none;
 }
 
+
+.navbar
+.menu
+.links {
+    display: none;
+}
+
 /* services section styling */
 .services, .teams{
     color:#fff;
@@ -376,6 +383,12 @@ section .title::after{
     width: 65%;
 }
 .skills-content .right .css::before{
+    width: 55%;
+}
+.skills-content .right .ruby::before {
+    width: 80%;
+}
+.skills-content .right .Ror::before {
     width: 55%;
 }
 .skills-content .right .js::before{
@@ -607,6 +620,11 @@ footer span a:hover{
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
+    }
+    .navbar
+    .menu
+    .links {
+        display: block;
     }
     .navbar .menu.active{
         left: 0;
