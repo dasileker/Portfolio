@@ -93,6 +93,9 @@ section .title::after {
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
+    background: #654ea3;
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+    background: linear-gradient(to right, #eaafc8, #654ea3);
 }
 
 .navbar.sticky {
@@ -250,19 +253,40 @@ section .title::after {
 /* about section styling */
 
 .about .title::after {
-    content: "who i am";
+    content: "What I Cloned";
 }
 
-.about .about-content .left {
-    width: 33.3%;
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
 }
 
-.about .about-content .left img {
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-    border-radius: 6px;
-    display: block;
+.column button {
+    width: 100px;
+    height: 40px;
+    background: #f12711;
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+    background: linear-gradient(to right, #f5af19, #f12711);
+    border: 2px solid rgb(230, 105, 2);
+}
+
+.column button:hover {
+    background: white;
+}
+
+.column button a:hover {
+    color: black;
+}
+
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .about .about-content .right {
@@ -664,7 +688,6 @@ footer span a:hover {
     text-decoration: underline;
 }
 
-
 /* responsive media query start */
 
 @media (max-width: 1300px) {
@@ -718,7 +741,6 @@ footer span a:hover {
         margin: 20px 0;
         font-size: 25px;
     }
-    
     .home .home-content .text-2 {
         font-size: 70px;
     }
