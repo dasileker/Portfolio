@@ -14,3 +14,23 @@
 
 ## Live demo link 
 
+- [link] (https://dasileker.github.io/Portfolio/)
+
+
+## Author 
+
+- @Zerradi Amine (github) : (www.github.com/dasileker)
+
+
+## License
+
+- this Project is MIT license
+
+## Feedback
+
+- if you have any question please open an issue
+
+## support 
+ 
+ -  give a star ⭐ if you like it
+
