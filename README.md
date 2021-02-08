@@ -9,7 +9,7 @@
 
 # Screenshot of the page
 
-[images] <img src="./src/assets/portfolio.png">
+<img src="portfolio.gif">
 
 
 ## Live demo link 
