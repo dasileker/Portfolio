@@ -1,3 +1,18 @@
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBDRdsYaceKYoDHPX6l_lZg39iZgNLBP9Y",
+  authDomain: "contact-b6a36.firebaseapp.com",
+  projectId: "contact-b6a36",
+  storageBucket: "contact-b6a36.appspot.com",
+  messagingSenderId: "164180802897",
+  appId: "1:164180802897:web:f94bd42f3b67e63c95a770"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+
 $(document).ready(function () {
   $(window).scroll(function () {
     // sticky navbar on scroll script
@@ -70,3 +85,46 @@ $(document).ready(function () {
     }
   });
 });
+
+/// refrence message
+
+const refMessage = firebase.database().ref('messages');
+
+// submit form 
+
+document.querySelector('#contact-form').addEventListener('submit', sendForm);
+
+function sendForm(e) {
+  e.preventDefault();
+
+
+  const name = input('#name');
+  const email = input('#email');
+  const subject = input('#subject');
+  const message = input('#message');
+  //save Message
+  saveMessage(name, email, subject, message);
+
+};
+
+
+//get input value 
+function input(id) {
+  return document.querySelector(id).value;
+}
+
+// store message in database
+
+function saveMessage(name, email, subject, message) {
+  const newMessageRef = refMessage.push();
+  newMessageRef.set({
+    name: name,
+    email: email,
+    subject: subject,
+    message: message
+  }).then(() => {
+    console.log('Data Saved')
+  }).catch((error) => {
+    console.log(error)
+  });
+}
