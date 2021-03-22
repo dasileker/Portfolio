@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "- in this Project for the Portfolio assesement",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dasileker/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dasileker/Portfolio/issues"
+  },
+  "homepage": "https://github.com/dasileker/Portfolio#readme",
+  "dependencies": {
+    "firebase": "^8.3.1"
+  }
+}
