@@ -69,7 +69,7 @@ section .title::before {
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #111;
+    background: rgb(4, 158, 247);
     transform: translateX(-50%);
 }
 
@@ -92,13 +92,13 @@ section .title::after {
     z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
+    background: rgb(4, 158, 247);
     transition: all 0.3s ease;
 }
 
 .navbar.sticky {
     padding: 15px 0;
-    background: #654ea3;
-    background: black;
+    background: rgb(4, 158, 247);
 }
 
 .navbar .max-width {
@@ -108,24 +108,24 @@ section .title::after {
 }
 
 .navbar .logo a {
-    color:rgb(4, 158, 247);
+    color:white;
     font-size: 35px;
     font-weight: 600;
 }
 
 .navbar .logo a span {
-    color: white;
+    color: black;
     transition: all 0.3s ease;
 }
 
 .navbar.sticky .logo a {
-    color: white;
+    color: black;
     font-size: 35px;
     font-weight: 600;
 }
 
 .navbar.sticky .logo a span {
-    color: rgb(4, 158, 247);
+    color: white;
 }
 
 .navbar .menu li {
@@ -143,11 +143,11 @@ section .title::after {
 }
 
 .navbar .menu li a:hover {
-    color: rgb(4, 158, 247);
+    color: black;
 }
 
 .navbar.sticky .menu li a:hover {
-    color: #fff;
+    color: black;
 }
 
 /* menu btn styling */
@@ -617,14 +617,17 @@ section .title::after {
 }
 /* footer section styling */
 footer{
-    background: #111;
+    background: rgb(4, 158, 247);
     padding: 15px 23px;
     color: #fff;
     text-align: center;
 }
 footer span a{
-    color: rgb(4, 158, 247);
+    color: black;
     text-decoration: none;
+}
+footer span a img {
+    margin-left: 30px;
 }
 footer span a:hover{
     text-decoration: underline;
@@ -679,11 +682,12 @@ footer span a:hover{
         display: block;
     }
     .navbar .menu li a {
-        display: inline-block;
+        display: block;
+        justify-content: space-between;
         margin: 20px 0;
         font-size: 25px;
     }
-    
+
     .home .home-content .text-2 {
         font-size: 70px;
     }

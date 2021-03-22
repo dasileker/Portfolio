@@ -30,6 +30,9 @@
         <li><a href="#skills" class="menu-btn">Skills</a></li>
         <li><a href="#teams" class="menu-btn">Teams</a></li>
         <li><a href="#contact" class="menu-btn">Contact</a></li>
+        <li><a href="https://github.com/dasileker"><img src="https://img.icons8.com/material-sharp/20/000000/github.png" /></a></li>
+        <li><a href="https://www.linkedin.com/in/amine-zerradi/"><img src="https://img.icons8.com/android/20/000000/linkedin.png" /></a></li>
+        <li><a href="https://angel.co/u/zerradi"><img src="./src/asstes/icons/angellist.png" alt="Angelist"></i></a></li>
       </ul>
       <div class="menu-btn">
         <i class="fas fa-bars"></i>
@@ -243,23 +246,23 @@
         </div>
         <div class="column right">
           <div class="text">Message me</div>
-          <form class="contact-form" action="#" method="POST">
+          <form class="contact-form" id="contact-form" action="#" method="POST">
             <div class="fields">
               <div class="field name">
-                <input type="text" class="fullname" placeholder="Name">
+                <input type="text" class="fullname" id="name" placeholder="Full Name Or Company">
               </div>
               <div class="field email">
-                <input type="text" class="email-input" placeholder="Email">
+                <input type="text" class="email-input" id="email" placeholder="Email Address">
               </div>
             </div>
             <div class="field">
-              <input type="text" class="subject" placeholder="Subject">
+              <input type="text" class="subject" id="subject" placeholder="Subject">
             </div>
             <div class="field textarea">
-              <textarea class="message" cols="30" rows="10" placeholder="Message.."></textarea>
+              <textarea class="message" id="message" cols="30" rows="10" placeholder="Message.."></textarea>
             </div>
             <div class="button-area">
-              <button class="send-msg" type="submit" name="send">Send message</button>
+              <button class="send-msg" type="submit" id="btn" name="send">Send message</button>
             </div>
           </form>
         </div>
@@ -270,9 +273,16 @@
   <!-- footer section start -->
   <footer>
     <span>Created By <a href="https://www.codingnepalweb.com">dasileker</a> | <span class="far fa-copyright"></span>
-      2021 All rights reserved.</span>
+      2021 All rights reserved.</span> |  <span>Contact</span> : <span><a href="https://angel.co/u/zerradi"><img src="./src/asstes/icons/angellist.png" alt="Angelist"></i></a></span>
+      <span><a href="https://www.linkedin.com/in/amine-zerradi/"><img src="https://img.icons8.com/android/20/000000/linkedin.png" /></a></span> <span><a href="https://github.com/dasileker"><img src="https://img.icons8.com/material-sharp/20/000000/github.png" /></a></span>
+
   </footer>
 
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
   <script src="script.js"></script>
 </body>
 
