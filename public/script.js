@@ -28,7 +28,9 @@ function sendForm(e) {
   //save Message
   saveMessage(name, email, subject, message);
 
-  sendMessage(name, email, subject, message);
+  document.querySelector('#contact-form').reset();
+  
+  sendEmail(name, email, subject, message);
 
 };
 
@@ -54,7 +56,17 @@ function saveMessage(name, email, subject, message) {
   });
 }
 
-
+function sendEmail(name, email, subject, message) {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "dasileker@gmail.com",
+    Password: "nanyugurjcdklvzv",
+    To: "dasileker@gmail.com",
+    From: "dasileker@gmail.com",
+    Subject: `You recieved an Email from ${name}`,
+    Body: `Name: ${name} <br/> Email: ${email} <br/> Subjest: ${subject} <br/> Message: ${message}`,
+  }).then(message => alert("message has been sent successfuly"));
+}
 
 $(document).ready(function () {
   $(window).scroll(function () {
@@ -128,20 +140,3 @@ $(document).ready(function () {
     }
   });
 });
-
-function sendMessage() {
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "dasileker@gmail.com",
-    Password: "password",
-    To: 'zerradi.amine@hotmail.com',
-    From: "dasileker@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body"
-  }).then(
-    message => alert(message)
-  );
-
-}
-
-
