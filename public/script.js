@@ -57,8 +57,8 @@ function sendEmail(name, email, subject, message) {
     Password: "jgkqzgsfxwkwgqad",
     To: "dasileker@gmail.com",
     From: "dasileker@gmail.com",
-    Subject: `${name} You recieved an Email from`,
-    Body: `Name: ${name} <br/> Email: ${email} <br/> Subjest: ${subject} <br/> Message: ${message}`,
+    Subject: `You recieved an Email from ${name}`,
+    Body: `Name: ${name} <br/> Email: ${email} <br/> Subjest: ${subject} <br/> Message: ${message}`
   }).then(message => alert("message has been sent successfuly"));
 }
 
