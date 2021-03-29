@@ -9,12 +9,12 @@
 
 # Screenshot of the page
 
-<img src="portfolio.gif">
+<img src="portfolio.png">
 
 
 ## Live demo link 
 
-- [link] (https://dasileker.github.io/Portfolio/)
+- [link!] (https://zerradi.firebaseapp.com/)
 
 
 ## Author 
