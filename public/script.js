@@ -52,11 +52,13 @@ function saveMessage(name, email, subject, message) {
 
 function sendEmail(name, email, subject, message) {
   Email.send({
-    secureToken: "686fa2d2-a268-4c6e-89d0-e6888b40a121 ",
+    Host: "smtp.gmail.com",
+    Username: "dasileker@gmail.com",
+    Password: "jgkqzgsfxwkwgqad",
     To: "dasileker@gmail.com",
     From: `${email}`,
-    Subject: `${subject}`,
-    Body: `${message}`
+    Subject: `You Have a New Email from ${email} subject: ${subject}`,
+    Body: `<h2>${message}</h2>`
   }).then(message => alert("message has been sent successfuly"));
 }
 
