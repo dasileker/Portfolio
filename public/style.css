@@ -264,6 +264,8 @@ section .title::after {
 
 .about .about-content .right {
     width: 55%;
+    margin-left: 255px;
+    text-align: center;
 }
 
 .about .about-content .right .text {
