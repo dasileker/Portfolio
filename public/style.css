@@ -449,7 +449,7 @@ section .title::after {
 /* teams section styling */
 
 .teams .title::after {
-    content: "who with me";
+    content: "Github Projects";
 }
 
 .teams .carousel .card {
@@ -481,6 +481,20 @@ section .title::after {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card .box button {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(4, 158, 247);
+    color: #fff;
+}
+
+.teams .carousel .card .box button:hover {
+    width: 100px;
+    height: 40px;
+    background-color: ;
+    color: black;
 }
 
 .teams .carousel .card img {
