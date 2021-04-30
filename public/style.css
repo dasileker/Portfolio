@@ -289,7 +289,7 @@ section .title::after {
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid rrgb(4, 158, 247);
+    border: 2px solid rgb(4, 158, 247);
     transition: all 0.3s ease;
 }
 
@@ -449,7 +449,7 @@ section .title::after {
 /* teams section styling */
 
 .teams .title::after {
-    content: "who with me";
+    content: "Github Projects";
 }
 
 .teams .carousel .card {
@@ -481,6 +481,40 @@ section .title::after {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card .box button {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(4, 158, 247);
+    border-radius: 100px;
+}
+
+.teams .carousel .card .box button a {
+    color: white;
+}
+
+.teams .carousel .card .box button:hover {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+}
+
+.teams .icon p {
+    text-decoration: underline;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: chocolate;
+    font-size: 100px;
+}
+
+.teams .icon .tools {
+    margin-top: 50px;
+    margin-left: 400px;
 }
 
 .teams .carousel .card img {

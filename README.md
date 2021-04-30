@@ -9,12 +9,12 @@
 
 # Screenshot of the page
 
-<img src="portfolio.gif">
+<img src="portfolio.png">
 
 
 ## Live demo link 
 
-- [link] (https://dasileker.github.io/Portfolio/)
+- <img src="https://img.icons8.com/color/20/000000/firebase.png"/><a href="https://zerradi.web.app/">Live Demo Link</a>
 
 
 ## Author 
@@ -33,4 +33,9 @@
 ## support 
  
  -  give a star ⭐ if you like it
+
+
+ ## License
+
+ - MIT 1.0.2 
 

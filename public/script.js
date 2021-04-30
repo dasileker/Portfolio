@@ -21,10 +21,10 @@ function sendForm(e) {
   e.preventDefault();
 
 
-  const name = input('#name');
-  const email = input('#email');
-  const subject = input('#subject');
-  const message = input('#message');
+  const name = document.querySelector('#name').value;
+  const email = document.querySelector('#email').value;
+  const subject = document.querySelector('#subject').value;
+  const message = document.querySelector('#message').value;
   //save Message
   saveMessage(name, email, subject, message);
 
@@ -33,12 +33,6 @@ function sendForm(e) {
   sendEmail(name, email, subject, message);
 
 };
-
-
-//get input value 
-function input(id) {
-  return document.querySelector(id).value;
-}
 
 // store message in database
 
@@ -60,11 +54,11 @@ function sendEmail(name, email, subject, message) {
   Email.send({
     Host: "smtp.gmail.com",
     Username: "dasileker@gmail.com",
-    Password: "nanyugurjcdklvzv",
+    Password: "jgkqzgsfxwkwgqad",
     To: "dasileker@gmail.com",
-    From: "dasileker@gmail.com",
-    Subject: `You recieved an Email from ${name}`,
-    Body: `Name: ${name} <br/> Email: ${email} <br/> Subjest: ${subject} <br/> Message: ${message}`,
+    From: `${email}`,
+    Subject: `You Have a New Email from ${email} subject: ${subject}`,
+    Body: `<h2>${message}</h2>`
   }).then(message => alert("message has been sent successfuly"));
 }
 
