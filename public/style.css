@@ -509,13 +509,14 @@ section .title::after {
     margin-top: 20px;
     font-family: 'Times New Roman', Times, serif;
     color: chocolate;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .teams .icon .tools {
-    display: block;
+    display: inline-flex;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 400px;
     width: 50px;
 }
 
@@ -705,6 +706,28 @@ footer span a:hover{
         margin-right: auto;
         padding-left: 280px;
         width:  5px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .teams .icon p {
+        text-decoration: underline;
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: chocolate;
+        font-size: 40px;
+    }
+    .teams .icon .tools {
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 255px;
+        width: 15px;
+    }
+    .teams .icon .tools img {
+        width: 70px;
     }
 }
 
