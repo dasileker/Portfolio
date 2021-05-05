@@ -790,7 +790,7 @@ footer span a:hover{
     }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .teams .icon .tools {
         display: inline-flex;
         margin-left: auto;
@@ -798,7 +798,7 @@ footer span a:hover{
         padding-left: 155px;
         width:  5px;
     }
-} */
+}
 
 @media (max-width: 690px) {
     .max-width {
@@ -876,7 +876,7 @@ footer span a:hover{
     }
 }
 
-/* @media (max-width: 425px) {
+@media (max-width: 425px) {
     .teams .icon p {
         text-decoration: underline;
         text-align: center;
@@ -896,7 +896,7 @@ footer span a:hover{
     .teams .icon .tools img {
         width: 30px;
     }
-} */
+}
 
 @media (max-width: 375px) {
     .teams .icon p {
