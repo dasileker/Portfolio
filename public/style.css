@@ -690,6 +690,22 @@ footer span a:hover{
     .max-width {
         padding: 0 50px;
     }
+    .teams .icon p {
+        text-decoration: underline;
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: lightseagreen;
+        font-size: 30px;
+    }
+    .teams .icon .tools {
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 280px;
+        width:  5px;
+    }
 }
 
 @media (max-width: 947px) {
@@ -774,6 +790,16 @@ footer span a:hover{
     }
 }
 
+/* @media (max-width: 768px) {
+    .teams .icon .tools {
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 155px;
+        width:  5px;
+    }
+} */
+
 @media (max-width: 690px) {
     .max-width {
         padding: 0 23px;
@@ -848,4 +874,49 @@ footer span a:hover{
         padding-left: 60px;
         width:  5px;
     }
+}
+
+/* @media (max-width: 425px) {
+    .teams .icon p {
+        text-decoration: underline;
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: chocolate;
+        font-size: 20px;
+    }
+    .teams .icon .tools {
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 85px;
+        width:  5px;
+    }
+    .teams .icon .tools img {
+        width: 30px;
+    }
+} */
+
+@media (max-width: 375px) {
+    .teams .icon p {
+        text-decoration: underline;
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: chocolate;
+        font-size: 20px;
+    }
+    .teams .icon .tools {
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 55px;
+        width:  5px;
+    }
+    .teams .icon .tools img {
+        width: 30px;
+    }
+
 }
