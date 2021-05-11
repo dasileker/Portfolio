@@ -494,6 +494,11 @@ section .title::after {
     color: white;
 }
 
+.teams .carousel .card .box  p {
+    color: aqua;
+    font-size: 15px;
+}
+
 .teams .carousel .card .box button:hover {
     width: 50px;
     height: 50px;
