@@ -229,7 +229,7 @@ section .title::after {
 .home .home-content a {
     display: inline-block;
     background: rgb(4, 158, 247);
-     color: #fff;
+     color: black;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
@@ -237,11 +237,6 @@ section .title::after {
     border-radius: 6px;
     border: 2px solid rgb(4, 158, 247);
     transition: all 0.3s ease;
-}
-
-.home .home-content a:hover {
-    color: rgb(4, 158, 247);
-    background: whitesmoke;
 }
 
 /* about section styling */
@@ -283,7 +278,7 @@ section .title::after {
 .about .about-content .right a {
     display: inline-block;
     background: rgb(4, 158, 247);
-    color: #fff;
+    color: black;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
@@ -291,11 +286,6 @@ section .title::after {
     border-radius: 6px;
     border: 2px solid rgb(4, 158, 247);
     transition: all 0.3s ease;
-}
-
-.about .about-content .right a:hover {
-    color: rgb(4, 158, 247);
-    background: none;
 }
 
 /* services section styling */
@@ -375,7 +365,7 @@ section .title::after {
 .skills .skills-content .left a {
     display: inline-block;
     background: rgb(4, 158, 247);
-    color: #fff;
+    color: black;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
@@ -383,11 +373,6 @@ section .title::after {
     border-radius: 6px;
     border: 2px solid rgb(4, 158, 247);
     transition: all 0.3s ease;
-}
-
-.skills .skills-content .left a:hover {
-    color: rgb(4, 158, 247);
-    background: none;
 }
 
 .skills .skills-content .right .bars {
@@ -639,7 +624,7 @@ section .title::after {
   align-items: center;
 }
 .right form .button-area button{
-  color: #fff;
+  color: black;
   display: block;
   width: 160px!important;
   height: 45px;
@@ -661,11 +646,11 @@ section .title::after {
 footer{
     background: rgb(4, 158, 247);
     padding: 15px 23px;
-    color: #fff;
+    color: black;
     text-align: center;
 }
 footer span a{
-    color: black;
+    color: whitesmoke;
     text-decoration: none;
 }
 footer span a img {
