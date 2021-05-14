@@ -985,7 +985,7 @@ footer span a:hover{
     }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) {
     .teams .icon p {
         text-decoration: underline;
         text-align: center;
