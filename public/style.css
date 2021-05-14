@@ -918,11 +918,11 @@ footer span a:hover{
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 85px;
+        padding-left: 95px;
         width:  15px;
     }
     .teams .icon .tools img {
-        width: 30px;
+        width: 25px;
     }
 }
 
