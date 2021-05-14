@@ -423,27 +423,27 @@ section .title::after {
 }
 
 .skills-content .right .html::before {
-    width: 90%;
+    width: 100%;
 }
 
 .skills-content .right .css::before {
-    width: 80%;
+    width: 100%;
 }
 
 .skills-content .right .js::before {
-    width: 50%;
+    width: 95%;
 }
 
 .skills-content .right .Ruby::before {
-    width: 70%;
+    width: 72%;
 }
 
 .skills-content .right .SQL::before {
-    width: 50%;
+    width: 78%;
 }
 
 .skills-content .right .ROR::before {
-    width: 70%;
+    width: 85%;
 }
 
 /* teams section styling */
