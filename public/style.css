@@ -823,7 +823,7 @@ footer span a:hover{
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 155px;
+        padding-left: 160px;
         width:  5px;
     }
 }
@@ -899,12 +899,12 @@ footer span a:hover{
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 60px;
+        padding-left: 65px;
         width:  5px;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     .teams .icon p {
         text-decoration: underline;
         text-align: center;
@@ -919,7 +919,7 @@ footer span a:hover{
         margin-left: auto;
         margin-right: auto;
         padding-left: 85px;
-        width:  5px;
+        width:  15px;
     }
     .teams .icon .tools img {
         width: 30px;
@@ -940,7 +940,37 @@ footer span a:hover{
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 55px;
+        padding-left: 60px;
+        width:  5px;
+    }
+    .teams .icon .tools img {
+        width: 30px;
+    }
+
+    .teams .title::after {
+        font-size: 12px;
+    }
+
+    .services .title::after, .teams .title::after {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .teams .icon p {
+        text-decoration: underline;
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: chocolate;
+        font-size: 20px;
+    }
+    .teams .icon .tools {
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 33px;
         width:  5px;
     }
     .teams .icon .tools img {
