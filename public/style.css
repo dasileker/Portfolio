@@ -661,6 +661,7 @@ footer span a:hover{
 }
 /* add styling for the smal  view mobiles*/
 /* responsive media query start */
+/* correcting the contrast color */
 
 @media (max-width: 1300px) {
     .home .max-width {
