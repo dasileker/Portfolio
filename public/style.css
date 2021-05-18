@@ -997,4 +997,10 @@ footer span a:hover{
     .services .title::after, .teams .title::after {
         font-size: 12px;
     }
+    footer {
+        width: 315px;
+    }
+    footer span a img {   
+        display: inline-block;
+    }
 }
