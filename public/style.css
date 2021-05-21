@@ -242,7 +242,7 @@ section .title::after {
 /* about section styling */
 
 .about .title::after {
-    content: "who i am";
+    content: "who I am";
 }
 
 .about .about-content .left {
@@ -301,7 +301,7 @@ section .title::after {
 
 .services .title::after, .teams .title::after {
     background: #111;
-    content: "what i provide";
+    content: "what I provide";
 }
 
 .services .serv-content .card {
@@ -345,7 +345,7 @@ section .title::after {
 /* skills section styling */
 
 .skills .title::after {
-    content: "what i know";
+    content: "what I know";
 }
 
 .skills .skills-content .column {
@@ -997,10 +997,13 @@ footer span a:hover{
     .services .title::after, .teams .title::after {
         font-size: 12px;
     }
-    footer {
-        width: 315px;
+
+    footer span {
+        font-size: 15px;
     }
-    footer span a img {   
-        display: inline-block;
+
+    footer span a img {
+        display: inline;
+        width: 20px;
     }
 }
