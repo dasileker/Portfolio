@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -41,7 +40,7 @@ section {
     margin: auto;
 }
 
-.about, .services, .skills, .teams, .contact, footer {
+.about, .services, .skills, .teams, .contact, footer, .icon {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -222,14 +221,14 @@ section .title::after {
 }
 
 .home .home-content .text-3 span {
-    color:rgb(4, 158, 247);
+    color: rgb(4, 158, 247);
     font-weight: 500;
 }
 
 .home .home-content a {
     display: inline-block;
     background: rgb(4, 158, 247);
-     color: black;
+    color: black;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
@@ -242,7 +241,7 @@ section .title::after {
 /* about section styling */
 
 .about .title::after {
-    content: "who I am";
+    content: "Who I Am";
 }
 
 .about .about-content .left {
@@ -301,7 +300,7 @@ section .title::after {
 
 .services .title::after, .teams .title::after {
     background: #111;
-    content: "what I provide";
+    content: "What I Provide";
 }
 
 .services .serv-content .card {
@@ -318,7 +317,7 @@ section .title::after {
     background: rgb(4, 158, 247);
 }
 
-.services .serv-content .card .box {
+.services .serv-content .card {
     transition: all 0.3s ease;
 }
 
@@ -345,7 +344,7 @@ section .title::after {
 /* skills section styling */
 
 .skills .title::after {
-    content: "what I know";
+    content: "What I Know";
 }
 
 .skills .skills-content .column {
@@ -416,19 +415,19 @@ section .title::after {
 }
 
 .skills-content .right .js::before {
-    width: 95%;
+    width: 100%;
 }
 
 .skills-content .right .Ruby::before {
-    width: 72%;
+    width: 100%;
 }
 
 .skills-content .right .SQL::before {
-    width: 78%;
+    width: 100%;
 }
 
 .skills-content .right .ROR::before {
-    width: 85%;
+    width: 100%;
 }
 
 /* teams section styling */
@@ -468,7 +467,12 @@ section .title::after {
     margin: 10px 0 7px 0;
 }
 
-.teams .carousel .card .box button {
+.btn {
+    display: inline;
+}
+
+button {
+    display: inline-block;
     width: 50px;
     height: 50px;
     background-color: rgb(4, 158, 247);
@@ -479,7 +483,7 @@ section .title::after {
     color: white;
 }
 
-.teams .carousel .card .box  p {
+.teams .carousel .card .box p {
     color: aqua;
     font-size: 15px;
 }
@@ -497,17 +501,21 @@ section .title::after {
     text-align: center;
     align-items: center;
     margin-top: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    color: chocolate;
+    color: rgb(4, 158, 247);
     font-size: 30px;
 }
 
 .teams .icon .tools {
     display: inline-flex;
-    margin-left: auto;
+    margin-top: 20px;
+    margin-left: -35px;
     margin-right: auto;
     padding-left: 400px;
     width: 50px;
+}
+
+.teams .icon .tools img {
+    margin-left: 10px;
 }
 
 .teams .carousel .card img {
@@ -548,59 +556,72 @@ section .title::after {
 }
 
 /* contact section styling */
-.contact .title::after{
-    content: "get in touch";
+
+.contact .title::after {
+    content: "Get in Touch";
 }
-.contact .contact-content .column{
+
+.contact .contact-content .column {
     width: calc(50% - 30px);
 }
-.contact .contact-content .text{
+
+.contact .contact-content .text {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.contact .contact-content .left p{
+
+.contact .contact-content .left p {
     text-align: justify;
 }
-.contact .contact-content .left .icons{
+
+.contact .contact-content .left .icons {
     margin: 10px 0;
 }
-.contact .contact-content .row{
+
+.contact .contact-content .row {
     display: flex;
     height: 65px;
     align-items: center;
 }
-.contact .contact-content .row .info{
+
+.contact .contact-content .row .info {
     margin-left: 30px;
 }
-.contact .contact-content .row i{
+
+.contact .contact-content .row i {
     font-size: 25px;
     color: rgb(4, 158, 247);
 }
-.contact .contact-content .info .head{
+
+.contact .contact-content .info .head {
     font-weight: 500;
 }
-.contact .contact-content .info .sub-title{
+
+.contact .contact-content .info .sub-title {
     color: #333;
 }
-.contact .right form .fields{
+
+.contact .right form .fields {
     display: flex;
 }
-.contact .right form .field,
-.contact .right form .fields .field{
+
+.contact .right form .field, .contact .right form .fields .field {
     height: 45px;
     width: 100%;
     margin-bottom: 15px;
 }
-.contact .right form .textarea{
+
+.contact .right form .textarea {
     height: 80px;
     width: 100%;
 }
-.contact .right form .name{
+
+.contact .right form .name {
     margin-right: 10px;
 }
-.contact .right form .field input,
-.contact .right form .textarea textarea{
+
+.contact .right form .field input, .contact .right form .textarea textarea {
     height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
@@ -611,56 +632,68 @@ section .title::after {
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
 }
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
+
+.contact .right form .field input:focus, .contact .right form .textarea textarea:focus {
     border-color: #b3b3b3;
 }
-.contact .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
 }
-.contact .right form .button-area{
-  display: flex;
-  align-items: center;
+
+.contact .right form .button-area {
+    display: flex;
+    align-items: center;
 }
-.right form .button-area button{
-  color: black;
-  display: block;
-  width: 160px!important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: rgb(4, 158, 247);
-  border: 2px solid rgb(4, 158, 247);
-  transition: all 0.3s ease;
+
+.right form .button-area button {
+    color: black;
+    display: block;
+    width: 160px!important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: rgb(4, 158, 247);
+    border: 2px solid rgb(4, 158, 247);
+    transition: all 0.3s ease;
 }
-.right form .button-area button:hover{
-  color: rgb(4, 158, 247);
-  background: none;
+
+.right form .button-area button:hover {
+    color: rgb(4, 158, 247);
+    background: none;
 }
+
 /* footer section styling */
-footer{
+
+footer {
     background: rgb(4, 158, 247);
     padding: 15px 23px;
     color: black;
     text-align: center;
 }
-footer span a{
+
+footer span a {
     color: black;
     text-decoration: none;
 }
+
 footer span a img {
     margin-left: 30px;
 }
-footer span a:hover{
+
+footer span a:hover {
     text-decoration: underline;
 }
+
 /* add styling for the smal  view mobiles*/
+
 /* responsive media query start */
+
 /* correcting the contrast color */
 
 @media (max-width: 1300px) {
@@ -694,7 +727,7 @@ footer span a:hover{
         margin-left: auto;
         margin-right: auto;
         padding-left: 280px;
-        width:  5px;
+        width: 5px;
     }
 }
 
@@ -712,7 +745,7 @@ footer span a:hover{
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 255px;
+        padding-left: 235px;
         width: 15px;
     }
     .teams .icon .tools img {
@@ -751,7 +784,6 @@ footer span a:hover{
         margin: 20px 0;
         font-size: 25px;
     }
-
     .home .home-content .text-2 {
         font-size: 70px;
     }
@@ -789,8 +821,8 @@ footer span a:hover{
         text-align: center;
         align-items: center;
         margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: chocolate;
+        /* font-family: 'Times New Roman', Times, serif; */
+        color: rgb(4, 158, 247);
         font-size: 35px;
     }
     .teams .icon .tools {
@@ -798,7 +830,7 @@ footer span a:hover{
         margin-left: auto;
         margin-right: auto;
         padding-left: 145px;
-        width:  5px;
+        width: 5px;
     }
 }
 
@@ -807,8 +839,8 @@ footer span a:hover{
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 160px;
-        width:  5px;
+        padding-left: 130px;
+        width: 5px;
     }
 }
 
@@ -833,8 +865,8 @@ footer span a:hover{
         text-align: center;
         align-items: center;
         margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: chocolate;
+        /* font-family: 'Times New Roman', Times, serif; */
+        color: rgb(4, 158, 247);
         font-size: 30px;
     }
     .teams .icon .tools {
@@ -842,7 +874,7 @@ footer span a:hover{
         margin-left: auto;
         margin-right: auto;
         padding-left: 125px;
-        width:  5px;
+        width: 5px;
     }
 }
 
@@ -875,8 +907,8 @@ footer span a:hover{
         text-align: center;
         align-items: center;
         margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: lightseagreen;
+        /* font-family: 'Times New Roman', Times, serif; */
+        color: rgb(4, 158, 247);
         font-size: 30px;
     }
     .teams .icon .tools {
@@ -884,7 +916,7 @@ footer span a:hover{
         margin-left: auto;
         margin-right: auto;
         padding-left: 65px;
-        width:  5px;
+        width: 5px;
     }
 }
 
@@ -894,16 +926,16 @@ footer span a:hover{
         text-align: center;
         align-items: center;
         margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: chocolate;
+        /* font-family: 'Times New Roman', Times, serif; */
+        color: rgb(4, 158, 247);
         font-size: 20px;
     }
     .teams .icon .tools {
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 95px;
-        width:  15px;
+        /* padding-left: 90px; */
+        width: 13px;
     }
     .teams .icon .tools img {
         width: 25px;
@@ -916,8 +948,8 @@ footer span a:hover{
         text-align: center;
         align-items: center;
         margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: chocolate;
+        /* font-family: 'Times New Roman', Times, serif; */
+        color: rgb(4, 158, 247);
         font-size: 20px;
     }
     .teams .icon .tools {
@@ -925,45 +957,42 @@ footer span a:hover{
         margin-left: auto;
         margin-right: auto;
         padding-left: 80px;
-        width:  5px;
+        width: 5px;
     }
     .teams .icon .tools img {
         width: 25px;
     }
-
     .teams .title::after {
         font-size: 12px;
     }
-
     .services .title::after, .teams .title::after {
         font-size: 12px;
     }
 }
+
 @media (max-width: 375px) {
     .teams .icon p {
         text-decoration: underline;
         text-align: center;
         align-items: center;
         margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: chocolate;
+        /* font-family: 'Times New Roman', Times, serif; */
+        color: rgb(4, 158, 247);
         font-size: 20px;
     }
     .teams .icon .tools {
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 60px;
-        width:  5px;
+        padding-left: 40px;
+        width: 13px;
     }
     .teams .icon .tools img {
-        width: 30px;
+        width: 25px;
     }
-
     .teams .title::after {
         font-size: 12px;
     }
-
     .services .title::after, .teams .title::after {
         font-size: 12px;
     }
@@ -975,33 +1004,29 @@ footer span a:hover{
         text-align: center;
         align-items: center;
         margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: chocolate;
+        /* font-family: 'Times New Roman', Times, serif; */
+        color: rgb(4, 158, 247);
         font-size: 20px;
     }
     .teams .icon .tools {
         display: inline-flex;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 45px;
-        width:  5px;
+        padding-left: 10px;
+        width: 13px;
     }
     .teams .icon .tools img {
         width: 25px;
     }
-
     .teams .title::after {
         font-size: 12px;
     }
-
     .services .title::after, .teams .title::after {
         font-size: 12px;
     }
-
     footer span {
         font-size: 15px;
     }
-
     footer span a img {
         display: inline;
         width: 20px;
