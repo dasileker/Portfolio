@@ -471,9 +471,9 @@ section .title::after {
     display: inline;
 }
 
-button {
+.live button {
     display: inline-block;
-    width: 50px;
+    width: 70px;
     height: 50px;
     background-color: rgb(4, 158, 247);
     border-radius: 100px;
@@ -489,7 +489,7 @@ button {
 }
 
 .teams .carousel .card .box button:hover {
-    width: 50px;
+    width: 70px;
     height: 50px;
     background-color: black;
     color: white;
