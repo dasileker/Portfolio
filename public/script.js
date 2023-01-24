@@ -52,9 +52,10 @@ function saveMessage(name, email, subject, message) {
 
 function sendEmail(name, email, subject, message) {
   Email.send({
-    Host: "smtp.gmail.com",
-    Username: "dasileker@gmail.com",
-    Password: "nglafptuplqxwjvi",
+    // Host: "smtp.elasticemail.com",
+    // Username: "dasileker@gmail.com",
+    // Password: "nglafptuplqxwjvi",
+    SecureTocken: " 0ebbe277-d9d0-48c4-859d-8344ee138e82",
     To: "dasileker@gmail.com",
     From: `${email}`,
     Subject: `You Have a New Email from ${email} subject: ${subject}`,
