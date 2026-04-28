@@ -10,6 +10,18 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    color: #111;
+    background: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
 /* custom scroll bar */
 
 ::-webkit-scrollbar {
@@ -38,6 +50,7 @@ section {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
+    width: 100%;
 }
 
 .about, .services, .skills, .teams, .contact, footer, .icon {
@@ -103,7 +116,19 @@ section .title::after {
 .navbar .max-width {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 32px;
+    max-width: none;
+    padding: 0 32px;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-left: auto;
 }
 
 .navbar .logo a {
@@ -133,12 +158,35 @@ section .title::after {
 }
 
 .navbar .menu li a {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: black;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 25px;
+    margin-left: 18px;
     transition: color 0.3s ease;
+}
+
+.navbar .menu li a.social-link {
+    width: 42px;
+    height: 42px;
+    min-height: 42px;
+    padding: 6px;
+    margin-left: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+}
+
+.navbar .menu li a.social-link:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.navbar .menu li a.social-link img {
+    width: 24px;
+    height: 24px;
 }
 
 .navbar .menu li a:hover {
@@ -156,6 +204,9 @@ section .title::after {
     font-size: 23px;
     cursor: pointer;
     display: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
 }
 
 .scroll-up-btn {
@@ -202,7 +253,15 @@ section .title::after {
 }
 
 .home .max-width {
-    margin: auto 0 auto 30px;
+    margin: auto;
+}
+
+.home .row {
+    width: 100%;
+}
+
+.home .home-content {
+    max-width: 720px;
 }
 
 .home .home-content .text-1 {
@@ -238,6 +297,13 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
+.home .home-content a:hover,
+.about .about-content .right a:hover,
+.skills .skills-content .left a:hover {
+    background: transparent;
+    color: rgb(4, 158, 247);
+}
+
 /* about section styling */
 
 .about .title::after {
@@ -257,7 +323,9 @@ section .title::after {
 }
 
 .about .about-content .right {
-    width: 55%;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
 .about .about-content .right .text {
@@ -311,6 +379,13 @@ section .title::after {
     padding: 20px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    min-height: 250px;
+    display: flex;
+    align-items: stretch;
+}
+
+.services .serv-content .card .box {
+    width: 100%;
 }
 
 .services .serv-content .card:hover {
@@ -351,6 +426,10 @@ section .title::after {
     width: calc(50% - 30px);
 }
 
+.skills .skills-content {
+    align-items: flex-start;
+}
+
 .skills .skills-content .left .text {
     font-size: 20px;
     font-weight: 600;
@@ -376,6 +455,10 @@ section .title::after {
 
 .skills .skills-content .right .bars {
     margin-bottom: 15px;
+    padding: 12px 16px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    background: #fff;
 }
 
 .skills .skills-content .right .info {
@@ -383,6 +466,7 @@ section .title::after {
     margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .skills .skills-content .right span {
@@ -390,44 +474,24 @@ section .title::after {
     font-size: 18px;
 }
 
-.skills .skills-content .right .line {
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
+.skills .skills-content .right .info span:first-child {
+    flex: 1;
 }
 
-.skills .skills-content .right .line::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgb(4, 158, 247);
+.skills .skills-content .right .info img {
+    width: 32px;
+    height: 32px;
 }
 
-.skills-content .right .html::before {
-    width: 100%;
-}
-
-.skills-content .right .css::before {
-    width: 100%;
-}
-
-.skills-content .right .js::before {
-    width: 100%;
-}
-
-.skills-content .right .Ruby::before {
-    width: 100%;
-}
-
-.skills-content .right .SQL::before {
-    width: 100%;
-}
-
-.skills-content .right .ROR::before {
-    width: 100%;
+.qa-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(4, 158, 247, 0.12);
+    color: rgb(4, 158, 247);
 }
 
 /* teams section styling */
@@ -471,29 +535,37 @@ section .title::after {
     display: inline;
 }
 
-.live button {
-    display: inline-block;
-    width: 70px;
-    height: 50px;
-    background-color: rgb(4, 158, 247);
-    border-radius: 100px;
+.live {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
 }
 
-.teams .carousel .card .box button a {
-    color: white;
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 2px solid rgb(4, 158, 247);
+    background: rgb(4, 158, 247);
+    color: black;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .teams .carousel .card .box p {
     color: aqua;
     font-size: 15px;
+    min-height: 72px;
 }
 
-.teams .carousel .card .box button:hover {
-    width: 70px;
-    height: 50px;
-    background-color: black;
-    color: white;
-    border-radius: 100px;
+.project-link:hover {
+    background: transparent;
+    color: #fff;
 }
 
 .teams .icon p {
@@ -506,16 +578,16 @@ section .title::after {
 }
 
 .teams .icon .tools {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
     margin-top: 20px;
-    margin-left: -35px;
-    margin-right: auto;
-    padding-left: 400px;
-    width: 50px;
 }
 
 .teams .icon .tools img {
-    margin-left: 10px;
+    width: 48px;
+    height: 48px;
 }
 
 .teams .carousel .card img {
@@ -565,6 +637,10 @@ section .title::after {
     width: calc(50% - 30px);
 }
 
+.contact .contact-content {
+    align-items: flex-start;
+}
+
 .contact .contact-content .text {
     font-size: 20px;
     font-weight: 600;
@@ -604,6 +680,7 @@ section .title::after {
 
 .contact .right form .fields {
     display: flex;
+    gap: 15px;
 }
 
 .contact .right form .field, .contact .right form .fields .field {
@@ -618,7 +695,7 @@ section .title::after {
 }
 
 .contact .right form .name {
-    margin-right: 10px;
+    margin-right: 0;
 }
 
 .contact .right form .field input, .contact .right form .textarea textarea {
@@ -677,13 +754,29 @@ footer {
     text-align: center;
 }
 
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 20px;
+}
+
+.footer-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 footer span a {
     color: black;
     text-decoration: none;
 }
 
-footer span a img {
-    margin-left: 30px;
+.footer-links a img {
+    margin-left: 0;
 }
 
 footer span a:hover {
@@ -713,47 +806,12 @@ footer span a:hover {
     .max-width {
         padding: 0 50px;
     }
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: lightseagreen;
-        font-size: 30px;
-    }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 280px;
-        width: 5px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        font-family: 'Times New Roman', Times, serif;
-        color: chocolate;
-        font-size: 40px;
-    }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 235px;
-        width: 15px;
-    }
-    .teams .icon .tools img {
-        width: 70px;
-    }
 }
 
 @media (max-width: 947px) {
+    .navbar {
+        padding: 20px 0;
+    }
     .menu-btn {
         display: block;
         z-index: 999;
@@ -769,20 +827,58 @@ footer span a:hover {
         top: 0;
         background: rgb(4, 158, 247);
         text-align: center;
-        padding-top: 80px;
+        padding: 100px 32px 32px;
         transition: all 0.3s ease;
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
     }
     .navbar .menu.active {
         left: 0;
     }
+    .navbar .menu {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin-left: 0;
+    }
     .navbar .menu li {
         display: block;
+        width: 100%;
+        max-width: 320px;
+    }
+    .navbar .menu li.social-item {
+        width: auto;
+        max-width: none;
     }
     .navbar .menu li a {
-        display: block;
-        justify-content: space-between;
-        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        min-height: 56px;
         font-size: 25px;
+        border-radius: 12px;
+    }
+    .navbar .menu li a.social-link {
+        width: 56px;
+        height: 56px;
+        min-height: 56px;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar .menu li .social-link img {
+        width: 28px;
+        height: 28px;
+    }
+    .navbar .menu li:nth-last-child(-n + 3) {
+        display: inline-flex;
+    }
+    .navbar .menu {
+        row-gap: 8px;
+    }
+    .home {
+        background-attachment: scroll;
     }
     .home .home-content .text-2 {
         font-size: 70px;
@@ -796,6 +892,9 @@ footer span a:hover {
     }
     .max-width {
         max-width: 930px;
+    }
+    .navbar .max-width {
+        padding: 0 50px;
     }
     .about .about-content .column {
         width: 100%;
@@ -816,36 +915,16 @@ footer span a:hover {
         width: 100%;
         margin-bottom: 35px;
     }
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        /* font-family: 'Times New Roman', Times, serif; */
-        color: rgb(4, 158, 247);
-        font-size: 35px;
-    }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 145px;
-        width: 5px;
-    }
-}
-
-@media (max-width: 768px) {
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 130px;
-        width: 5px;
+    .footer-content {
+        flex-direction: column;
     }
 }
 
 @media (max-width: 690px) {
     .max-width {
+        padding: 0 23px;
+    }
+    .navbar .max-width {
         padding: 0 23px;
     }
     .home .home-content .text-2 {
@@ -860,30 +939,26 @@ footer span a:hover {
     .services .serv-content .card {
         width: 100%;
     }
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        /* font-family: 'Times New Roman', Times, serif; */
-        color: rgb(4, 158, 247);
-        font-size: 30px;
+    .teams .carousel .card .box p {
+        min-height: 0;
     }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 125px;
-        width: 5px;
+    .skills .skills-content .right .bars {
+        padding: 10px 14px;
     }
 }
 
 @media (max-width: 500px) {
+    section {
+        padding: 80px 0;
+    }
+    .navbar {
+        padding: 16px 0;
+    }
     .home .home-content .text-2 {
-        font-size: 50px;
+        font-size: 42px;
     }
     .home .home-content .text-3 {
-        font-size: 27px;
+        font-size: 24px;
     }
     .about .about-content .right .text, .skills .skills-content .left .text {
         font-size: 19px;
@@ -902,66 +977,43 @@ footer span a:hover {
         font-size: 23px;
         line-height: 38px;
     }
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        /* font-family: 'Times New Roman', Times, serif; */
-        color: rgb(4, 158, 247);
-        font-size: 30px;
+    .teams .carousel .card {
+        padding: 25px 20px;
     }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 65px;
-        width: 5px;
+    .teams .icon p {
+        font-size: 24px;
+    }
+    .navbar .menu {
+        padding: 88px 20px 24px;
+    }
+    .navbar .menu li {
+        max-width: 100%;
+    }
+    .navbar .menu li a {
+        font-size: 22px;
+        min-height: 52px;
+    }
+    .contact .contact-content .row {
+        height: auto;
+        align-items: flex-start;
+        margin-bottom: 16px;
     }
 }
 
 @media (max-width: 430px) {
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        /* font-family: 'Times New Roman', Times, serif; */
-        color: rgb(4, 158, 247);
-        font-size: 20px;
+    .home .home-content .text-1 {
+        font-size: 22px;
     }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        /* padding-left: 90px; */
-        width: 13px;
+    .teams .icon p {
+        font-size: 20px;
     }
     .teams .icon .tools img {
         width: 25px;
+        height: 25px;
     }
 }
 
 @media (max-width: 388px) {
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        /* font-family: 'Times New Roman', Times, serif; */
-        color: rgb(4, 158, 247);
-        font-size: 20px;
-    }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 80px;
-        width: 5px;
-    }
-    .teams .icon .tools img {
-        width: 25px;
-    }
     .teams .title::after {
         font-size: 12px;
     }
@@ -971,25 +1023,6 @@ footer span a:hover {
 }
 
 @media (max-width: 375px) {
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        /* font-family: 'Times New Roman', Times, serif; */
-        color: rgb(4, 158, 247);
-        font-size: 20px;
-    }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 40px;
-        width: 13px;
-    }
-    .teams .icon .tools img {
-        width: 25px;
-    }
     .teams .title::after {
         font-size: 12px;
     }
@@ -999,24 +1032,11 @@ footer span a:hover {
 }
 
 @media (max-width: 320px) {
-    .teams .icon p {
-        text-decoration: underline;
-        text-align: center;
-        align-items: center;
-        margin-top: 20px;
-        /* font-family: 'Times New Roman', Times, serif; */
-        color: rgb(4, 158, 247);
+    .navbar .logo a {
+        font-size: 28px;
+    }
+    .menu-btn {
         font-size: 20px;
-    }
-    .teams .icon .tools {
-        display: inline-flex;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 10px;
-        width: 13px;
-    }
-    .teams .icon .tools img {
-        width: 25px;
     }
     .teams .title::after {
         font-size: 12px;

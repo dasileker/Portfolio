@@ -1,12 +1,10 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyBGq967Asv50A57kg_OTqwl6x16IEHmZLY",
-  authDomain: "zerradi.firebaseapp.com",
-  databaseURL: "https://zerradi-default-rtdb.firebaseio.com",
-  projectId: "zerradi",
-  storageBucket: "zerradi.appspot.com",
-  messagingSenderId: "978402640387",
-  appId: "1:978402640387:web:aeaf18dfe59ae192c20436"
-};
+const appConfig = window.APP_CONFIG;
+
+if (!appConfig || !appConfig.firebase) {
+  throw new Error('Missing APP_CONFIG. Generate public/config.js from .env before loading the site.');
+}
+
+const firebaseConfig = appConfig.firebase;
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
@@ -55,7 +53,7 @@ function sendEmail(name, email, subject, message) {
     // Host: "smtp.elasticemail.com",
     // Username: "dasileker@gmail.com",
     // Password: "nglafptuplqxwjvi",
-    SecureTocken: " 0ebbe277-d9d0-48c4-859d-8344ee138e82",
+    SecureTocken: appConfig.emailSecureToken,
     To: "dasileker@gmail.com",
     From: `${email}`,
     Subject: `You Have a New Email from ${email} subject: ${subject}`,
@@ -90,24 +88,29 @@ $(document).ready(function () {
   $('.navbar .menu li a').click(function () {
     // applying again smooth scroll on menu items click
     $('html').css("scrollBehavior", "smooth");
+    $('.navbar .menu').removeClass("active");
+    $('.menu-btn i').removeClass("active");
+    $('.menu-btn').attr('aria-expanded', 'false');
   });
 
   // toggle menu/navbar script
   $('.menu-btn').click(function () {
     $('.navbar .menu').toggleClass("active");
     $('.menu-btn i').toggleClass("active");
+    const isExpanded = $('.navbar .menu').hasClass("active");
+    $('.menu-btn').attr('aria-expanded', String(isExpanded));
   });
 
   // typing text animation script
   var typed = new Typed(".typing", {
-    strings: ["Developer", "Designer", "Freelancer"],
+    strings: ["Developer", "QA Engineer", "Freelancer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["Developer", "Designer", "Freelancer"],
+    strings: ["Developer", "QA Engineer", "Freelancer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true

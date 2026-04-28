@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "generate-config": "node scripts/generate-config.js"
+  },
   "dependencies": {
     "webpack": "^5.37.0"
   }

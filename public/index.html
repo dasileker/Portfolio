@@ -32,21 +32,21 @@
     <div class="max-width">
       <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
       <ul class="menu">
-        <li><a href="#home" class="menu-btn">Home</a></li>
-        <li><a href="#about" class="menu-btn">About</a></li>
-        <li><a href="#services" class="menu-btn">Services</a></li>
-        <li><a href="#skills" class="menu-btn">Skills</a></li>
-        <li><a href="#contact" class="menu-btn">Contact</a></li>
-        <li><a href="#" onclick="window.open('https://github.com/dasileker')"><img
-              src="https://img.icons8.com/material-sharp/30/000000/github.png" alt="#"/></a></li>
-        <li><a href="#" onclick="window.open('https://www.linkedin.com/in/amine-zerradi/')" ><img
-              src="https://img.icons8.com/android/25/000000/linkedin.png" alt="#"/></a></li>
-        <li><a href="#" onclick="window.open('https://angel.co/u/zerradi')"><img src="https://img.icons8.com/windows/30/000000/angelist.png" alt="#"/></a>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="social-item"><a class="social-link" href="https://github.com/dasileker" target="_blank" rel="noreferrer"><img
+              src="https://img.icons8.com/material-sharp/30/000000/github.png" alt="GitHub"/></a></li>
+        <li class="social-item"><a class="social-link" href="https://www.linkedin.com/in/amine-zerradi/" target="_blank" rel="noreferrer"><img
+              src="https://img.icons8.com/android/25/000000/linkedin.png" alt="LinkedIn"/></a></li>
+        <li class="social-item"><a class="social-link" href="https://angel.co/u/zerradi" target="_blank" rel="noreferrer"><img src="https://img.icons8.com/windows/30/000000/angelist.png" alt="AngelList"/></a>
         </li>
       </ul>
-      <div class="menu-btn">
+      <button class="menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
     </div>
   </nav>
 
@@ -93,8 +93,8 @@
             <div class="text">Weather App.</div>
             <p>This is a project made with JavaScript and an API. The purpose of it is to make a fully-working weather app.</p>
             <div class="live">
-              <button type="button" onclick="window.open('https://github.com/dasileker/weather')">GitHub</button>
-              <button type="button" onclick="window.open('https://weather-jawi.netlify.app')">Live-App</button>
+              <a class="project-link" href="https://github.com/dasileker/weather" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="project-link" href="https://weather-jawi.netlify.app" target="_blank" rel="noreferrer">Live App</a>
             </div>  
           </div>
         </div>
@@ -104,8 +104,8 @@
             <div class="text">Private Events.</div>
             <p>An event calendar build with rails which implement function scopes and dates.</p>
             <div class="live">
-              <button type="button" onclick="window.open('https://github.com/dasileker/private-events')">GitHub</button>
-              <button type="button" onclick="window.open('https://event-private.herokuapp.com')">Live-App</button>
+              <a class="project-link" href="https://github.com/dasileker/private-events" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="project-link" href="https://event-private.herokuapp.com" target="_blank" rel="noreferrer">Live App</a>
             </div>
           </div>
         </div>
@@ -115,8 +115,8 @@
             <div class="text">To Do App.</div>
             <p>A To-do-list app where you can track and manage all of your task in one place.</p>
              <div class="live">
-              <button type="button" onclick="window.open('https://github.com/dasileker/To-do-list')">GitHub</button>
-              <button type="button" onclick="window.open('https://rawcdn.githack.com/dasileker/To-do-list/23e859ea84c544538c270f6427dcd78bc29af673/dist/index.html')">Live-App</button>
+              <a class="project-link" href="https://github.com/dasileker/To-do-list" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="project-link" href="https://rawcdn.githack.com/dasileker/To-do-list/23e859ea84c544538c270f6427dcd78bc29af673/dist/index.html" target="_blank" rel="noreferrer">Live App</a>
              </div>
           </div>
         </div>
@@ -126,8 +126,8 @@
             <div class="text">Phaser game.</div>
             <p>This is a game that I made using a new tool called Phaser, JavaScript, and an API</p>
             <div class="live">
-              <button type="button" onclick="window.open('https://github.com/dasileker/rpg-game')">GitHub</button>
-              <button type="button" onclick="window.open('https://space-salvation.netlify.app')">Live-App</button>
+              <a class="project-link" href="https://github.com/dasileker/rpg-game" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="project-link" href="https://space-salvation.netlify.app" target="_blank" rel="noreferrer">Live App</a>
             </div>
           </div>
         </div>
@@ -137,8 +137,8 @@
             <div class="text">React-calculator-App</div>
             <p>This Is a Calculator That I created with React-app, using components, and props. </p>
             <div class="live">
-              <button type="button" onclick="window.open('https://github.com/dasileker/react-calculator')">GitHub</button>
-              <button type="button" onclick="window.open('https://alhasiba.netlify.app/')">Live-App</button>
+              <a class="project-link" href="https://github.com/dasileker/react-calculator" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="project-link" href="https://alhasiba.netlify.app/" target="_blank" rel="noreferrer">Live App</a>
             </div>
           </div>
         </div>
@@ -196,58 +196,81 @@
       <div class="skills-content">
         <div class="column left">
           <div class="text">My creative skills & experiences.</div>
-          <p>You will find here the multiple skills I have as software developer.</p>
+          <p>You will find here the multiple skills I have as a software developer and QA engineer, from frontend technologies to test automation and quality assurance tools.</p>
           <a href="#">Read more</a>
         </div>
         <div class="column right">
           <div class="bars">
             <div class="info">
               <span>HTML</span>
-              <span><img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="#" /></span>
+              <span><img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt="HTML" /></span>
             </div>
-            <div class="line html"></div>
           </div>
           <div class="bars">
             <div class="info">
               <span>CSS</span>
-              <span><img src="https://img.icons8.com/color/48/000000/css3.png" alt="#" /></span>
+              <span><img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" /></span>
             </div>
-            <div class="line css"></div>
           </div>
           <div class="bars">
             <div class="info">
               <span>JavaScript</span>
-              <span><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="#" /></span>
+              <span><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" /></span>
             </div>
-            <div class="line js"></div>
           </div>
           <div class="bars">
             <div class="info">
               <span>Ruby</span>
-              <span><img src="https://img.icons8.com/color/48/000000/ruby-programming-language.png" alt="#" /></span>
+              <span><img src="https://img.icons8.com/color/48/000000/ruby-programming-language.png" alt="Ruby" /></span>
             </div>
-            <div class="line Ruby"></div>
           </div>
           <div class="bars">
             <div class="info">
               <span>SQL</span>
-              <span><img src="https://img.icons8.com/color/48/000000/microsoft-sql-server.png" alt="#" /></span>
+              <span><img src="https://img.icons8.com/color/48/000000/microsoft-sql-server.png" alt="SQL" /></span>
             </div>
-            <div class="line SQL"></div>
           </div>
           <div class="bars">
             <div class="info">
               <span>ROR</span>
-              <span><img src="https://img.icons8.com/windows/48/000000/ruby-on-rails.png" alt="#"/></span>
+              <span><img src="https://img.icons8.com/windows/48/000000/ruby-on-rails.png" alt="Ruby on Rails"/></span>
             </div>
-            <div class="line ROR"></div>
           </div>
           <div class="bars">
             <div class="info">
               <span>React</span>
-              <span><img src="https://img.icons8.com/plasticine/48/000000/react.png" alt="#"/></span>
+              <span><img src="https://img.icons8.com/plasticine/48/000000/react.png" alt="React"/></span>
             </div>
-            <div class="line ROR"></div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>Selenium</span>
+              <span class="qa-badge"><i class="fas fa-vial"></i></span>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>Playwright</span>
+              <span class="qa-badge"><i class="fas fa-theater-masks"></i></span>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>Appium</span>
+              <span class="qa-badge"><i class="fas fa-mobile-alt"></i></span>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>Cypress</span>
+              <span class="qa-badge"><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="info">
+              <span>API Testing / Postman</span>
+              <span class="qa-badge"><i class="fas fa-paper-plane"></i></span>
+            </div>
           </div>
         </div>
       </div>
@@ -315,19 +338,25 @@
 
   <!-- footer section start -->
   <footer>
-    <span>Created By <a href="#" onclick="window.open('https://www.github.com/dasileker')">dasileker</a> | <span class="far fa-copyright"></span>
-      2021 All rights reserved.</span> | <span>Contact</span> : <br><span><a href="#" onclick="window.open('https://angel.co/u/zerradi')"><img
-          src="https://img.icons8.com/windows/24/000000/angelist.png" alt="#"/></a></span>
-    <span><a href="#" onclick="window.open('https://www.linkedin.com/in/amine-zerradi/')"><img
-          src="https://img.icons8.com/android/20/000000/linkedin.png" alt="#"/></a></span> <span><a
-        href="#" onclick="window.open('https://github.com/dasileker')"><img
-          src="https://img.icons8.com/material-sharp/20/000000/github.png" alt="#"/></a></span>
-
+    <div class="footer-content">
+      <span>Created By <a href="https://www.github.com/dasileker" target="_blank" rel="noreferrer">dasileker</a> | <span class="far fa-copyright"></span>
+        2021 All rights reserved.</span>
+      <div class="footer-links">
+        <span>Contact</span>
+        <a href="https://angel.co/u/zerradi" target="_blank" rel="noreferrer"><img
+            src="https://img.icons8.com/windows/24/000000/angelist.png" alt="AngelList"/></a>
+        <a href="https://www.linkedin.com/in/amine-zerradi/" target="_blank" rel="noreferrer"><img
+            src="https://img.icons8.com/android/20/000000/linkedin.png" alt="LinkedIn"/></a>
+        <a href="https://github.com/dasileker" target="_blank" rel="noreferrer"><img
+            src="https://img.icons8.com/material-sharp/20/000000/github.png" alt="GitHub"/></a>
+      </div>
+    </div>
   </footer>
 
 
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+  <script src="./config.js"></script>
   <script src="./script.js"></script>
 </body>
 
