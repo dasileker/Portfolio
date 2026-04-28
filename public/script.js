@@ -53,7 +53,7 @@ function sendEmail(name, email, subject, message) {
     // Host: "smtp.elasticemail.com",
     // Username: "dasileker@gmail.com",
     // Password: "nglafptuplqxwjvi",
-    SecureTocken: appConfig.emailSecureToken,
+    SecureToken: appConfig.emailSecureToken,
     To: "dasileker@gmail.com",
     From: `${email}`,
     Subject: `You Have a New Email from ${email} subject: ${subject}`,
