@@ -1,48 +1,67 @@
-## Portfiolio 
+# Amine Zerradi — Quality Signal Portfolio
 
-- in this Project for the Portfolio assesement
+A production-focused portfolio for Amine Zerradi, Senior QA Automation Engineer. The experience
+positions quality as an engineering system spanning strategy, automation, APIs, data, CI/CD,
+performance, observability, and feedback.
 
-## built with
+## Stack
 
-- HTML && CSS && BOOTSRTAP
-- LINTERS &  HINTRC
+- Next.js App Router and strict TypeScript
+- Tailwind CSS plus a custom token-based design system
+- Motion and Lenis with reduced-motion and touch fallbacks
+- Vitest, React Testing Library, Playwright, and Axe
+- Static export compatible with both Vercel and Firebase Hosting
 
-# Screenshot of the page
+## Local development
 
-<img src="portfolio.png">
+Node.js 20.9 or newer is required. Node.js 20 LTS is recommended.
 
+```bash
+npm install
+npm run dev
+```
 
-## Live demo link 
+Open `http://localhost:3000`.
 
-- <img src="https://img.icons8.com/color/20/000000/firebase.png"/><a href="https://zerradi.web.app/">Live Demo Link</a>
+## Quality checks
 
+```bash
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+npm run test:e2e
+npm run lighthouse
+```
 
-## Author 
+The production build is exported to `out/`.
 
-- @Zerradi Amine (github) : (www.github.com/dasileker)
+## Content maintenance
 
+Public career data is stored in `src/content/`. Keep work statuses explicit (`completed`,
+`current`, `planned`, or `historical`) and do not add unverified metrics, private infrastructure,
+client names, credentials, or NDA-protected details.
 
-## License
+The resume action is intentionally omitted until a current public PDF is supplied. Company marks
+use accessible wordmarks unless an approved official vector can be verified and stored under
+`public/brands/`.
 
-- this Project is MIT license
+## Deployment
 
-## Feedback
+### Vercel
 
-- if you have any question please open an issue
+Import the repository into Vercel. The platform detects Next.js automatically and serves the
+static export. No runtime environment variables are required.
 
-## support 
- 
- -  give a star ⭐ if you like it
+### Firebase Hosting
 
+The Firebase project alias remains `zerradi`. Build first, then deploy:
 
- ## License
+```bash
+npm run build
+firebase deploy --only hosting
+```
 
- - MIT 1.0.2 
-
-## Local config
-
-- Copy `.env.example` to `.env` and fill in your Firebase and email values.
-- Run `npm run generate-config` before opening or deploying the site.
-- This creates `public/config.js`, which is ignored by git.
-- Important: this removes keys from the repository, but values used in browser code are still visible in the client. For real secret handling, move email sending and any privileged operations to a backend or serverless function.
+`firebase.json` serves the generated `out/` directory. Pull requests can use the included Firebase
+preview workflow when `FIREBASE_SERVICE_ACCOUNT_ZERRADI` is configured.
 

@@ -1,0 +1,16 @@
+{
+  "name": "Amine Zerradi · Quality Engineering",
+  "short_name": "AZ Quality",
+  "description": "Senior QA Automation Engineer and Quality Engineering portfolio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05080c",
+  "theme_color": "#05080c",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
